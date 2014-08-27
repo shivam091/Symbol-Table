@@ -40,7 +40,9 @@ public class AdjacencyList {
 		 * Constructor to set name of the node and next node.
 		 * 
 		 * @param name
+		 * 			Name of the node.
 		 * @param next
+		 * 			Next node.
 		 */
 		Node(String name, Node next) {
 			this.name = name;
