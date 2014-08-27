@@ -1,4 +1,4 @@
-package com.symboltable;
+package org.symboltable;
 
 import java.lang.Math;
 
@@ -27,6 +27,7 @@ public class Vector {
 	 * 
 	 * @return Vector in string format.
 	 */
+	@Override
 	public String toString() {
 		return "Vector(" + dX + ", " + dY + ")";
 	}
@@ -53,7 +54,7 @@ public class Vector {
 	}
 
 	/**
-	 * Method to subtract vector v1 from v.
+	 * Method to subtract vector <i>v1</i> from <i>v</i>.
 	 * 
 	 * @param v1
 	 *            Vector.

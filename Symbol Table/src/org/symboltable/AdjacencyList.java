@@ -1,10 +1,10 @@
-package com.symboltable;
+package org.symboltable;
 
 /**
  * An adjacency list of strings, implemented with a linked list.
  * 
  * @author shivam
- *
+ * 
  */
 public class AdjacencyList {
 
@@ -22,31 +22,31 @@ public class AdjacencyList {
 	 * Helper linked list data type to build nodes
 	 * 
 	 * @author shivam
-	 *
+	 * 
 	 */
 	private static class Node {
 
 		/**
 		 * Name of the node.
 		 */
-		String name;
+		String nodeName;
 
 		/**
 		 * Next node.
 		 */
-		Node next;
+		Node nextNode;
 
 		/**
 		 * Constructor to set name of the node and next node.
 		 * 
 		 * @param name
-		 * 			Name of the node.
+		 *            Name of the node.
 		 * @param next
-		 * 			Next node.
+		 *            Next node.
 		 */
-		Node(String name, Node next) {
-			this.name = name;
-			this.next = next;
+		Node(String nodeName, Node nextNode) {
+			this.nodeName = nodeName;
+			this.nextNode = nextNode;
 		}
 	}
 
@@ -84,10 +84,11 @@ public class AdjacencyList {
 	 * 
 	 * @return String representation of list (in reverse order of list).
 	 */
+	@Override
 	public String toString() {
 		String s = "";
-		for (Node x = firstElement; x != null; x = x.next)
-			s = x.name + ", " + s;
+		for (Node x = firstElement; x != null; x = x.nextNode)
+			s = x.nodeName + ", " + s;
 		return "{ " + s + "}";
 	}
 
@@ -99,19 +100,8 @@ public class AdjacencyList {
 	public String[] toArray() {
 		String[] names = new String[size];
 		int i = size;
-		for (Node x = firstElement; x != null; x = x.next)
-			names[--i] = x.name;
+		for (Node x = firstElement; x != null; x = x.nextNode)
+			names[--i] = x.nodeName;
 		return names;
-	}
-
-	public static void main(String[] args) {
-
-		AdjacencyList adjancencyList = new AdjacencyList();
-		adjancencyList.insert("Java");
-		adjancencyList.insert("C");
-		adjancencyList.insert("C++");
-		adjancencyList.insert("Matlab");
-
-		System.out.println(adjancencyList);
 	}
 }
