@@ -1,7 +1,7 @@
 Symbol Table
 ====================
 
-This repository contains classes to implement Symbol Table using Java.
+Library containing classes to implement Symbol Table using Java.
 
 ##Downloads
 
@@ -21,4 +21,5 @@ Downloads are also available on the [GitHub project's Downloads section] (https:
 * SymbolTable:
 * Track:
 * Vector: Java class to construct two-dimensional vectors.
+
 
